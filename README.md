@@ -1,4 +1,5 @@
-# imgoun
+# [iamgoun](https://iamgoun.dev/dist/index.html)
+> Execuse-moi, since there are some discrepancies of tech stacks, it is only optimized in Chrome browser.
 
 Hello, I am Go-Un!    
 
