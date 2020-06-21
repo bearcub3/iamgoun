@@ -1,0 +1,32 @@
+@import './functions';
+
+$white: #fff;
+$black: #09203f;
+$green: #00b22f;
+$orange: #ff7700;
+$yellow: #ffd400;
+$blue: #0050c1;
+$pink: #ffb6c1;
+
+$base-font: 'Open Sans', sans-serif;
+$heading-font: 'Roboto Slab', serif;
+$intro-font: 'DM Serif Text', serif;
+$korean-font: 'Nanum Myeongjo', serif;
+
+$font-size-base: 1rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$line-height-base: 1.5;
+
+$grid-breakpoints: (
+  xs: 375px,
+  sm: 416px,
+  md: 800px,
+  lg: 1450px
+) !default;
+
+$position-relative: relative;
+$position-absolute: absolute;
+$position-fixed: fixed;

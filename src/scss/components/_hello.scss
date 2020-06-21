@@ -1,0 +1,49 @@
+.hello {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  @include media-breakpoint-between(null, sm) {
+    min-width: 100vw;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+}
+
+.text-effect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 1.8rem/1.5 $intro-font;
+  color: $black;
+  letter-spacing: 0.1rem;
+  word-break: break-all;
+  overflow: scroll;
+  width: 60vw;
+  height: auto;
+  text-align: justify;
+  text-rendering: optimizeLegibility;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+  @include media-breakpoint-between(null, xs) {
+    width: 75vw;
+    height: 50vh;
+    font-size: 1.2rem;
+    letter-spacing: -0.01rem;
+  }
+  @include media-breakpoint-between(sm, sm) {
+    width: 70vw;
+    height: 60vh;
+    font-size: 1.5rem;
+  }
+}
+
+.text-gradient {
+  color: $pink;
+}
+
+.ui {
+  transform: rotate(-10deg);
+}
