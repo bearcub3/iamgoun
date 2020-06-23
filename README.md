@@ -1,6 +1,6 @@
 # [iamgoun](https://iamgoun.dev/dist/index.html)
 
-> Execuse-moi, since there are some discrepancies of tech stacks, it is only optimized in Chrome browser.
+> Execuse-moi, since there are some discrepancies of tech stacks, it is only optimized in Chrome browser. and this website was built a couple of months ago. My react skill has improved since then. 
 
 Hello, I am Go-Un!
 
