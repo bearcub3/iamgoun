@@ -9,18 +9,18 @@ const Techstacks = () => {
   const { current, skillList } = useTech();
   const props = useSpring({
     numb: skillList[current]['proficiency'],
-    from: { numb: 0 }
+    from: { numb: 0 },
   });
 
   const [shapeLoc, setShapeLoc] = useState([
     window.innerWidth,
-    window.innerHeight
+    window.innerHeight,
   ]);
 
   return (
     <div className="techstacks" id="techstacks">
       <ResizeObserver
-        onResize={rect => {
+        onResize={(rect) => {
           setShapeLoc([rect.width, rect.Height]);
         }}
       />
@@ -28,7 +28,7 @@ const Techstacks = () => {
       <div className="shapes">
         <div className="tech-proficiency">{skillList[current]['tech']}</div>
         <animated.div style={props} className="score">
-          {props.numb.interpolate(x => x.toFixed(0))}
+          {props.numb.interpolate((x) => x.toFixed(0))}
         </animated.div>
         {skillList.map((item, index) => (
           <TechShape key={index} id={item.id} type={item.type} />

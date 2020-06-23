@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import ResizeObserver from 'react-resize-observer';
 
 const Hello = () => {
-  const [gradient, setGradient] = useState(false);
   const [width, reset] = useState(window.innerWidth);
 
-  console.log(width);
   return (
     <div className="hello" id="hello">
       <ResizeObserver
-        onResize={rect => {
+        onResize={(rect) => {
           reset(window.innerWidth);
         }}
       />
@@ -23,12 +21,12 @@ const Hello = () => {
           &#9995;
         </span>
       </h2>
-      <div className={`text-effect ${gradient ? 'text-gradient' : ''}`}>
-        As a self-taught developer with a keen interest in web technology and
-        with web design experience, I love this work and would love to further
-        my career as a Front-end/UI Designer. Even though I have a rather short
-        experience, I am a well-versed problem-solver when it comes to front-end
-        development and web design. Please drop me a line!
+      <div className={`text-effect`}>
+        My motto : He can do it, She can do it, why not me?
+        <br />
+        Even though I have a rather limited experience as a developer, I am
+        enthusiastic about learning new web technologies and love the
+        problem-solving in terms of UI and UX. Please drop me a line!
       </div>
     </div>
   );

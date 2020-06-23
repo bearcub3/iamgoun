@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import { useGesture } from 'react-use-gesture';
 import { useTrail, animated } from 'react-spring';
 import useTech from './useTech';
 
@@ -8,27 +7,27 @@ const slow = { mass: 10, tension: 200, friction: 50 };
 const trans = (x, y) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 let x, y;
 
-const getArbitraryNum = function(max) {
+const getArbitraryNum = function (max) {
   return Math.floor(Math.random() * Math.floor(max));
 };
 
-const TechShape = props => {
+const TechShape = (props) => {
   const [trail, set] = useTrail(3, () => ({
     xy: [
       getArbitraryNum(window.innerWidth - 150),
-      getArbitraryNum(window.innerHeight - 150)
+      getArbitraryNum(window.innerHeight - 150),
     ],
-    config: i => (i === 0 ? fast : slow)
+    config: (i) => (i === 0 ? fast : slow),
   }));
 
   useEffect(() => {
-    ['resize', 'load'].forEach(evt =>
+    ['resize', 'load'].forEach((evt) =>
       window.addEventListener(evt, () => {
         set({
           xy: [
             getArbitraryNum(window.innerWidth - 150),
-            getArbitraryNum(window.innerHeight - 150)
-          ]
+            getArbitraryNum(window.innerHeight - 150),
+          ],
         });
       })
     );
@@ -49,16 +48,16 @@ const TechShape = props => {
       </svg>
       <div
         className={`tech-shape-${props.type}`}
-        onMouseOver={e => {
+        onMouseOver={(e) => {
           set({
             xy:
               e.clientX >= x && e.clientY >= y
                 ? [window.innerWidth, window.innerHeight]
-                : [e.clientX, e.clientY]
+                : [e.clientX, e.clientY],
           });
           e.target.parentElement.style.zIndex = '100';
         }}
-        onMouseOut={e => {
+        onMouseOut={(e) => {
           e.target.parentElement.style.zIndex = '0';
           set({ xy: [e.clientX, e.clientY] });
         }}
@@ -70,7 +69,7 @@ const TechShape = props => {
           <animated.div
             key={index}
             style={{
-              transform: props.xy.interpolate(trans)
+              transform: props.xy.interpolate(trans),
             }}
           ></animated.div>
         ))}

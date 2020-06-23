@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Logo() {
   return (
-    <a className="logo-link" href="/">
+    <a className="logo-link" href="/index.html">
       <h1>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
           <text

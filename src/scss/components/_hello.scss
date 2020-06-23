@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 400 1.8rem/1.5 $intro-font;
+  font: 400 1.5rem/1.5 $intro-font;
   color: $black;
   letter-spacing: 0.1rem;
   word-break: break-all;
@@ -27,16 +27,16 @@
   -webkit-hyphens: manual;
   -ms-hyphens: manual;
   hyphens: manual;
+
   @include media-breakpoint-between(null, xs) {
-    width: 75vw;
+    width: 70vw;
     height: 50vh;
-    font-size: 1.2rem;
     letter-spacing: -0.01rem;
   }
   @include media-breakpoint-between(sm, sm) {
     width: 70vw;
     height: 60vh;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 

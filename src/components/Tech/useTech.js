@@ -11,7 +11,7 @@ const useTech = () => {
   return {
     current: state.currentSkill,
     skillList: state.mySkills,
-    showThis
+    showThis,
   };
 };
 
