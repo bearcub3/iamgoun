@@ -1,0 +1,6 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" d="M-1-1h502v502H-1z"/>
+  <g>
+    <circle cy="150" cx="150" r="150"/>
+  </g>
+</svg>

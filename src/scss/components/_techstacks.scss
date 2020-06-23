@@ -1,0 +1,143 @@
+.techstacks .shapes {
+  @include size(100vw, 100vh);
+  @include media-breakpoint-between(null, sm) {
+    min-width: 100vw;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    margin: 0 auto;
+  }
+  z-index: 999999;
+  margin: 3rem;
+  box-sizing: border-box;
+}
+
+.tech-proficiency {
+  color: $black;
+  @include positioning(absolute, 50%, 50%);
+  transform: translate(-50%, -100%);
+  font: 400 3.5rem/1.5 $intro-font;
+  z-index: 90000;
+  @include media-breakpoint-between(null, xs) {
+    font-size: 2.5rem;
+  }
+  @include media-breakpoint-between(sm, sm) {
+    font-size: 3.5rem;
+  }
+}
+
+.score {
+  color: $black;
+  @include positioning(absolute, 50%, 50%);
+  transform: translate(-50%, -30%);
+  font: 400 5.5rem/1.5 $intro-font;
+  z-index: 90000;
+  @include media-breakpoint-between(null, xs) {
+    font-size: 4.5rem;
+  }
+  @include media-breakpoint-between(sm, sm) {
+    font-size: 5.5rem;
+  }
+}
+
+[class^='tech-shape-'] > svg {
+  display: none;
+}
+
+[class^='tech-shape-'] > div:nth-child(1) {
+  @include size(6rem, 6rem);
+  @include media-breakpoint-between(null, xs) {
+    @include size(2rem, 2rem);
+  }
+  @include media-breakpoint-between(sm, sm) {
+    @include size(3.5rem, 3.5rem);
+  }
+}
+
+[class^='tech-shape-'] > div:nth-child(2) {
+  @include size(8rem, 8rem);
+  @include media-breakpoint-between(null, xs) {
+    @include size(4.5rem, 4.5rem);
+  }
+  @include media-breakpoint-between(sm, sm) {
+    @include size(5.5rem, 5.5rem);
+  }
+}
+
+[class^='tech-shape-'] > div:nth-child(3) {
+  @include size(4.5rem, 4.5rem);
+  @include media-breakpoint-between(null, xs) {
+    @include size(3rem, 3rem);
+  }
+  @include media-breakpoint-between(sm, sm) {
+    @include size(2rem, 2rem);
+  }
+}
+
+[class^='tech-shape-'] {
+  position: absolute;
+  @include size(8rem, 8rem);
+  @include media-breakpoint-between(null, xs) {
+    @include size(4.5rem, 4.5rem);
+  }
+  @include media-breakpoint-between(sm, sm) {
+    @include size(5.5rem, 5.5rem);
+  }
+
+  filter: url('#goo');
+  will-change: transform;
+}
+
+[class^='tech-shape-'] > div {
+  position: absolute;
+  cursor: pointer;
+}
+
+.tech-shape-circle div,
+.tech-shape-circle2 div {
+  border-radius: 50%;
+}
+
+.tech-shape-circle div {
+  background: $green;
+}
+
+.tech-shape-circle2 div {
+  background: $orange;
+}
+
+.tech-shape-rect div {
+  background: $yellow;
+}
+
+.tech-shape-poly div,
+.tech-shape-poly2 div {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7rem 10rem 7rem;
+  @include media-breakpoint-between(null, xs) {
+    border-width: 0 3.5rem 4.5rem 3.5rem;
+  }
+  @include media-breakpoint-between(sm, sm) {
+    border-width: 0 4.5rem 5.5rem 4.5rem;
+  }
+}
+
+.tech-shape-poly div {
+  border-color: transparent transparent $blue transparent;
+}
+
+.tech-shape-poly2 > div {
+  border-color: transparent transparent $yellow transparent;
+}
+
+.blob-center {
+  @include size(55%, 55%);
+  fill: $pink;
+  @include positioning(absolute, 50%, 50%);
+  transform: translate(-50%, -55%);
+  z-index: -1;
+  @include media-breakpoint-between(null, sm) {
+    @include size(65%, 65%);
+  }
+}

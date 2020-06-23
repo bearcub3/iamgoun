@@ -1,0 +1,33 @@
+@import '../vendor/animation';
+@import '../vendor/mixins';
+
+.navigation > svg {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.navigation.is-active > svg {
+  opacity: 1;
+  z-index: 90000;
+}
+
+.wave1_svg__wave {
+  transform: scaleX(-1);
+  & path:first-child {
+    fill: #bcd3f2;
+    animation: waveEffect1 5s ease infinite;
+  }
+
+  & path:last-child {
+    fill: #438cf2;
+    animation: waveEffect2 7s -3s ease-out infinite;
+  }
+}
+
+.wave2_svg__wave path {
+  fill: #0050c1;
+  animation: waveEffect2 10s -2s ease-in infinite;
+}

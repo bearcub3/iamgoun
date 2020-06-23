@@ -1,0 +1,245 @@
+.intro-container {
+  @include positioning(relative, 0, 0);
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  @include media-breakpoint-between(null, sm) {
+    min-width: 100vw;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+}
+
+.intro-interactive {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 4rem/1 $intro-font;
+  letter-spacing: 0.08rem;
+  text-align: center;
+  min-height: 100vh;
+  @include media-breakpoint-between(null, sm) {
+    font-size: 3rem;
+    min-height: -webkit-fill-available;
+  }
+  @include media-breakpoint-between(null, sm) {
+    min-width: 100vw;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+}
+
+.intro-title {
+  color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  box-sizing: border-box;
+  width: 25rem;
+  height: 25rem;
+  will-change: transform, opacity;
+
+  @include media-breakpoint-between(null, sm) {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+.intro .shapes {
+  @include size(100%, 100%);
+  @include media-breakpoint-between(null, sm) {
+    min-width: 100vw;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+  z-index: 0;
+}
+
+.intro-rect-1 {
+  @include positioning(absolute, 77%, 27%);
+  @include size(6.25rem, 6.25rem);
+  animation: 2s ease-in-out rect-scale-transition;
+  backface-visibility: hidden;
+  @include media-breakpoint-down(xs) {
+    @include positioning(absolute, 78%, 25%);
+    @include size(4.5rem, 4.5rem);
+  }
+}
+
+.scaled-rect {
+  transform: scale(1, 1.5);
+}
+
+.intro-rect-2 {
+  @include positioning(absolute, 2%, 62%);
+  @include size(2.5rem, 2.5rem);
+  animation: 1s linear upwards-transition-2;
+  backface-visibility: hidden;
+  @include media-breakpoint-down(xs) {
+    @include size(2rem, 2rem);
+    @include positioning(absolute, 2%, 50%);
+  }
+}
+
+.intro-tri-1 {
+  @include size(6.25rem, 6.25rem);
+  @include positioning(absolute, 87.5%, 67%);
+  animation: 1.5s ease-out upwards-transition;
+  backface-visibility: hidden;
+  @include media-breakpoint-between(null, xs) {
+    @include size(5.6rem, 5.6rem);
+  }
+  @include media-breakpoint-between(sm, sm) {
+    @include size(8rem, 8rem);
+  }
+}
+
+.intro-tri-2 {
+  @include positioning(fixed, 55%, 60%);
+  @include size(21.875rem, 21.875rem);
+  backface-visibility: hidden;
+  @include media-breakpoint-between(null, xs) {
+    @include size(16rem, 16rem);
+    @include positioning(fixed, 55%, 45%);
+  }
+  @include media-breakpoint-between(sm, sm) {
+    @include positioning(fixed, 60%, 55%);
+  }
+}
+
+.intro-tri-3 {
+  @include size(9.375rem, 9.375rem);
+  @include positioning(fixed, -2%, 88%);
+  backface-visibility: hidden;
+  @include media-breakpoint-between(null, xs) {
+    @include size(7rem, 7rem);
+    @include positioning(fixed, -2%, 63%);
+  }
+  @include media-breakpoint-between(sm, sm) {
+    @include positioning(fixed, -2%, 82%);
+  }
+  z-index: -1;
+}
+
+.intro-circ-1 {
+  @include size(8.125rem, 8.125rem);
+  @include positioning(absolute, 60%, 20%);
+  animation: 2s 1s ease-out circle-scale-transition;
+  backface-visibility: hidden;
+  @include media-breakpoint-between(null, xs) {
+    @include size(5.5rem, 5.5rem);
+    @include positioning(absolute, 25%, 25%);
+    z-index: -1;
+  }
+  @include media-breakpoint-between(sm, sm) {
+    @include positioning(absolute, 67%, 10%);
+  }
+}
+
+.intro-circ-2 {
+  @include size(1.25rem, 1.25rem);
+  @include positioning(absolute, 87%, 13%);
+  animation-delay: 1s;
+  animation: 1.5s ease circle-scale-1-transition;
+  backface-visibility: hidden;
+  @include media-breakpoint-between(null, xs) {
+    @include size(1rem, 1rem);
+    @include positioning(absolute, 70%, 14%);
+  }
+}
+
+.intro-circ-3 {
+  @include size(3.125rem, 3.125rem);
+  @include positioning(absolute, 60%, 75%);
+  animation: 4s -2s ease-in circle-position-transition-75;
+  backface-visibility: hidden;
+  @include media-breakpoint-between(null, xs) {
+    @include positioning(absolute, 73%, 72%);
+  }
+}
+
+.intro-rect-path-01 {
+  @include size(3.125rem, 3.125rem);
+  @include positioning(fixed, 75%, 16%);
+  @include media-breakpoint-between(null, xs) {
+    @include size(4rem, 4rem);
+    @include positioning(fixed, 66.1%, 7%);
+  }
+}
+
+.intro-rect-path-02 {
+  @include size(6.25rem, 6.25rem);
+  @include positioning(fixed, 25%, 15%);
+  @include media-breakpoint-between(null, xs) {
+    @include size(5rem, 5rem);
+    @include positioning(fixed, 25%, 5%);
+  }
+  @include media-breakpoint-between(xs, sm) {
+    @include positioning(fixed, 25%, 15%);
+  }
+}
+
+.intro-zigzag-01 {
+  @include size(4.375rem, 4.375rem);
+  @include positioning(fixed, 85%, 72%);
+  transform: rotate(20deg);
+  backface-visibility: hidden;
+  @include media-breakpoint-between(null, xs) {
+    @include size(5rem, 5rem);
+    @include positioning(fixed, 72%, 40%);
+    transform: rotate(40deg);
+    z-index: -1;
+  }
+  @include media-breakpoint-between(xs, sm) {
+    @include positioning(fixed, 72%, 70%);
+    transform: rotate(40deg);
+  }
+}
+
+.intro-rect-animation {
+  width: 7rem;
+  @include positioning(fixed, 20%, 75%);
+  animation: 5.5s 1.5s ease-out rectRotate3D infinite;
+  backface-visibility: hidden;
+  @include media-breakpoint-between(null, xs) {
+    width: 3.5rem;
+    @include positioning(fixed, 20%, 65%);
+  }
+  @include media-breakpoint-between(xs, sm) {
+    width: 5rem;
+    @include positioning(fixed, 15%, 66%);
+  }
+}
+
+.intro-rect-path1,
+.intro-rect-path2,
+.intro-rect-path3 {
+  transform-origin: 20% 50%;
+}
+
+.intro-rect-path2 {
+  animation: 0.4s 1s ease-out translate3D;
+  backface-visibility: hidden;
+}
+
+.intro-circle-path-01 {
+  @include size(4rem, 4rem);
+  @include positioning(fixed, 10%, 39%);
+  backface-visibility: hidden;
+}
+
+.intro-circ-4 {
+  opacity: 0.2;
+  @include size(2.7rem, 2.7rem);
+  @include positioning(fixed, 10%, 37.5%);
+  backface-visibility: hidden;
+}
+
+.blob {
+  backface-visibility: hidden;
+  fill: url('#blob-colour') $pink;
+  z-index: 90000;
+}

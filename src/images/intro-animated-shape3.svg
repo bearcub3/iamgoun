@@ -1,0 +1,35 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewbox="0 0 500 500"
+>
+    <path
+      stroke-width="8"
+      stroke="#000"
+      opacity="1"
+      fill="none"
+      d="M182 182h256v256H182z"
+      class="intro-rect-path1"
+    >
+    </path>
+    <path
+      stroke-width="8"
+      stroke="#000"
+      opacity="1"
+      fill="none"
+      d="M96 102h256v256H96z"
+      class="intro-rect-path2"
+    >
+    </path>
+    <path
+      stroke="#000"
+      opacity="1"
+      stroke-linecap="null"
+      stroke-linejoin="null"
+      stroke-opacity="null"
+      stroke-width="8"
+      fill="none"
+      d="M97 102.548l85.054 80.054M352 101.548l85.054 80.054M96 358.548l85.054 80.054M352 357.548l85.054 80.054"
+      class="intro-rect-path3"
+    >
+    </path>
+</svg>
