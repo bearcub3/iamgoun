@@ -86,7 +86,7 @@
     "debugthis": "node --inspect --inspect-brk ./src/index.js",
     "format": "prettier \"src/**/*.{js,html}\" —write"
   },
-  "name": "imgoun",
+  "name": "iamgoun",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Go-Un, Shin",

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Logo from './Logo';
-import WaveOne from './../images/wave1.svg';
-import WaveTwo from './../images/wave2.svg';
 
 export default function Header() {
   const [state, setState] = useState(false);
@@ -51,8 +49,6 @@ export default function Header() {
             </a>
           </li>
         </ul>
-        <WaveOne />
-        <WaveTwo />
       </nav>
     </header>
   );
