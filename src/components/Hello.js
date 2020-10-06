@@ -22,11 +22,12 @@ const Hello = () => {
         </span>
       </h2>
       <div className={`text-effect`}>
-        My motto : He can do it, She can do it, why not me?
-        <br />
-        Even though I have a rather limited experience as a developer, I am
-        enthusiastic about learning new web technologies and love the
-        problem-solving in terms of UI and UX. Please drop me a line!
+        My initiative and ownership is great and I can work independently with
+        occasional supports from senior developers/designers as my experience in
+        certain area is limited. At the same time, I always study and keep
+        learning to improve myself as a UX developer. I believe my disadvantage
+        is only reflected from the lack of in-house experience, not my
+        capabilities as a UX developer.
       </div>
     </div>
   );
