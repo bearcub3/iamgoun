@@ -1,2 +1,2 @@
 
-[IAMGOUN](https://iamgoun.dev/dist/index.html)
+[IAMGOUN](https://bearcub3.github.io/iamgoun/index.html)
